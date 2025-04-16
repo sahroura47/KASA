@@ -1,7 +1,7 @@
 import Banner from "../components/Banner"
 import BannerAbout from "../assets/BannerAbout.svg"
 import Dropin from "../components/Dropin";
-const About= () =>{
+const AboutPage= () =>{
     return (
     <div className="homeContainer">
         <Banner image={BannerAbout} caption={''}/>
@@ -26,4 +26,4 @@ const About= () =>{
     </div>
     );
 }
-export default About;
+export default AboutPage;

@@ -101,6 +101,7 @@ filter: brightness(0.5);
   height: 209px;
   position: absolute;
     left: 0;
+    bottom: 30;
 }
 .dropinContainer{
   display: flex;
@@ -133,6 +134,13 @@ summary{
   z-index: 90;
 
 }
+.notFound{
+  width: 597;
+  height: 263;
+  color: #FF6060;
+  padding: 30px;
+
+}
 .dropinText{
   display: flex;
   padding: 10px;
@@ -151,6 +159,29 @@ summary::-webkit-details-marker {
 .fa-chevron-up{
   color: #FFF;
   font-size: 24px ;
+}
+.notFoundContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  gap: 20px;
+  padding: 30px;
+  margin-bottom: 35px;
+}
+.NotfoundText{
+  color: #FF6060;
+font-weight: 500;
+font-size: 36px;
+line-height: 143%;
+letter-spacing: 0%;
+vertical-align: bottom;
+padding: 30px;
+
+}
+.linkToHome{
+  
 }
 .footerContainer{
   display: flex;

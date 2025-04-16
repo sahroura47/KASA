@@ -2,7 +2,7 @@ import Banner from "../components/Banner"
 import CardsContainer from "../components/Cards-container";
 import bannerImg from "../assets/banner-img.svg"
 const caption="Chez vous, partout et ailleurs"
-const Home= () => {
+const HomePage= () => {
     return (
 
     <div className="homeContainer">
@@ -10,4 +10,4 @@ const Home= () => {
         <CardsContainer />
     </div>)
 }
-export default Home;
+export default HomePage;
