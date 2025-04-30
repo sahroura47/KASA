@@ -6,6 +6,7 @@ import About from './pages/AboutPage'
 import logo from './assets/logo.svg'
 import Footer from './components/Footer'
 import NotFoundPage from './pages/NotFoundPage'
+import CardDetailPage from './pages/CardDetailPage'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/a-propos' element= {<About />} />
+            <Route path='/card/:id' element={<CardDetailPage />} />
             <Route path='*' element={<NotFoundPage />} />
         </Routes>
         </main>

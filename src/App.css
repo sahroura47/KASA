@@ -53,28 +53,32 @@
   border-radius: 16px;
 filter: brightness(0.5);
 }
+.bannerText{
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 
+}
 .imgText{
   display: block;
   position: absolute;
   top: 30%;
   font-size: 48px;
   font-weight: 700;
-  -webkit-text-stroke: 1px #000;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  text-shadow: 
+  1px 1px 0 #000,  
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000;  
   color: #FFF;
 
 }
 .cardsContainer{
   width: 95%;
-  height: 80%;
-  justify-content: space-around;
+  height: auto;
+  justify-content: space-evenly;
   align-items: center;
-  align-self: center;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 20px;
   background-color: #F6F6F6;
   border-radius: 16px;
   margin-bottom: 20px;
@@ -82,9 +86,19 @@ filter: brightness(0.5);
 .card{
   background-color: #FF6060 ;
   height: 250px;
-  width: 20%;
+  width: 100%;
+  max-width: 250px;
   border-radius: 10px;
   position: relative;
+  cursor: pointer;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+.cardImg{
+  width: 100%; 
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
 }
 .cardText{
   color: #FFF;
@@ -92,6 +106,13 @@ filter: brightness(0.5);
   font-weight: 700;
   position: absolute;
   bottom: 20px;
+  margin-left: 10px;
+}
+.linkToDetail{
+  width: 30%; 
+  height: 100%;
+  text-decoration: none;
+  display: block;
 }
 .footer{
   display: flex;
@@ -103,6 +124,110 @@ filter: brightness(0.5);
     left: 0;
     bottom: 30;
 }
+/* card details page */
+.cardDetailTitle{
+  color: #000;
+  display: flex;
+}
+.cardDetailPageContainer{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.carouselContainer{
+  display: flex;
+  flex-direction: row;
+  border-radius: 25px;
+  justify-content: center;
+  height:415px;
+  width: 100%;
+}
+.carouselImage{
+  object-fit: cover;
+  border-radius: 25px;
+  width: 100%;
+  position: relative;
+}
+.arrowRight{
+  position: absolute;
+  background-color: transparent;
+  align-self: center;
+  right: 10%;
+  top: 33%;
+  border: none;
+  outline: none;
+}
+.arrowRight:hover{
+  opacity: 0.5;
+  border:none;
+  outline: none;
+}
+.arrowLeft{
+  position: absolute;
+  background-color: transparent;
+  align-self: center;
+  left: 10%;
+  top: 33%;
+  z-index: 30;
+  border: none;
+  outline: none;
+
+}
+.arrowLeft:hover{
+  opacity: 0.5;
+  text-decoration: none;
+  border: none;
+  outline: none;
+
+}
+.arrowLeft:focus{
+  border: none;
+  outline: none;
+}
+.arrowRight:focus{
+  border: none;
+  outline: none;
+}
+.cardsCaption{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+.cardsCaption h2{
+  color: #FF6060;
+}
+.cardDetailTitle{
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+.location{
+  color: #000;
+  font-weight: 400;
+  font-size: 18px;
+}
+.hostInfo{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+
+}
+.hostName{
+ 
+}
+.hostLogo{
+  display: flex;
+  border-radius: 50%;
+  background-color: #888;
+  border: #000;
+  height: 64px;
+  width: 64px;
+}
+/* About page*/
 .dropinContainer{
   display: flex;
   flex-direction: column;
@@ -180,9 +305,7 @@ vertical-align: bottom;
 padding: 30px;
 
 }
-.linkToHome{
-  
-}
+
 .footerContainer{
   display: flex;
   flex-direction: column;
@@ -208,9 +331,6 @@ padding: 30px;
   }
 }
 
-.card {
-  padding: 2em;
-}
 
 .read-the-docs {
   color: #888;

@@ -1,0 +1,41 @@
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import ImageCarousel from "../components/ImageCarousel";
+function CardDetailPage() {
+  const { id } = useParams();
+  const [card, setCards] = useState(null);
+  useEffect(() => {
+    const fetchCardDetail = async () => {
+      try {
+        const response = await fetch(
+          `http://localhost:8080/api/properties/${id}`
+        );
+        const data = await response.json();
+        setCards(data);
+      } catch (error) {
+        console.error(
+          "erreur lors de la récupération des détails de la carte",
+          error
+        );
+      }
+    };
+    fetchCardDetail();
+  }, [id]);
+  if (!card) {
+    return <div>chargement...</div>;
+  }
+  return (
+    <div className="cardDetailPageContainer">
+      <ImageCarousel pictures={card.pictures} />
+      <div className="cardsCaption">
+        <h2 className="cardDetailTitle">{card.title} <br></br>
+        <span className="location">{card.location}</span> </h2>
+        <div className="hostInfo">
+          <p className="hostName">{card.host.name}</p>
+          <div className="hostLogo"></div>
+        </div>
+      </div>
+    </div>
+  );
+}
+export default CardDetailPage;

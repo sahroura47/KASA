@@ -1,9 +1,9 @@
-const Cards=() => {
+const Cards=({imageUrl, caption}) => {
     return(
         <figure className="card">
-                <figcaption className="cardText"> Titre de la<br></br>
-                location</figcaption>
+                <img src={imageUrl} alt={caption} className="cardImg" />
+                <figcaption className="cardText"> {caption}</figcaption>
             </figure>
     )
 }
-export default Cards
+export default Cards;
