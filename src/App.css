@@ -217,7 +217,8 @@ filter: brightness(0.5);
 
 }
 .hostName{
- 
+ color: #FF6060;
+ font-size: 18px;
 }
 .hostLogo{
   display: flex;
@@ -226,7 +227,29 @@ filter: brightness(0.5);
   border: #000;
   height: 64px;
   width: 64px;
+  align-self: center;
 }
+.reviewPanel{
+  margin-bottom: 20px;
+}
+.tagsPanel{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.tag{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+ gap: 10px;
+  background-color: #FF6060;
+  color: #FFF;
+  width: 10%;
+  border-radius: 30PX;
+  font-weight: 700;
+}
+
 /* About page*/
 .dropinContainer{
   display: flex;

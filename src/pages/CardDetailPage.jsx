@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ImageCarousel from "../components/ImageCarousel";
+import Tags from "../components/Tags";
 function CardDetailPage() {
   const { id } = useParams();
   const [card, setCards] = useState(null);
@@ -28,12 +29,17 @@ function CardDetailPage() {
     <div className="cardDetailPageContainer">
       <ImageCarousel pictures={card.pictures} />
       <div className="cardsCaption">
-        <h2 className="cardDetailTitle">{card.title} <br></br>
-        <span className="location">{card.location}</span> </h2>
+        <h2 className="cardDetailTitle">
+          {card.title} <br></br>
+          <span className="location">{card.location}</span>{" "}
+        </h2>
         <div className="hostInfo">
-          <p className="hostName">{card.host.name}</p>
+          <p className="hostName">{card.host.name.split(" ")[0]} <br></br> {card.host.name.split(" ")[1]}</p>
           <div className="hostLogo"></div>
         </div>
+      </div>
+      <div className="reviewPanel">
+        <Tags tags={card.tags} />
       </div>
     </div>
   );
