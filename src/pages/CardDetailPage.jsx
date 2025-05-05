@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ImageCarousel from "../components/ImageCarousel";
 import Tags from "../components/Tags";
+import Ratings from "../components/Ratings";
+import Dropin from "../components/Dropin";
 function CardDetailPage() {
   const { id } = useParams();
   const [card, setCards] = useState(null);
@@ -40,6 +42,21 @@ function CardDetailPage() {
       </div>
       <div className="reviewPanel">
         <Tags tags={card.tags} />
+        <div className="ratings">
+          < Ratings rating={card.rating} />
+        </div>
+      </div>
+      <div className="descEquip">
+        <Dropin title="Description"  >
+          <p className="description">{card.description}</p>
+          </Dropin>
+        <Dropin title="Equipements"> 
+          <lu className="equipment-list">
+          {card.equipments.map((item, index) => (
+<li key={index} className="equipment-item">{item}</li>
+        ))}
+        </lu>
+        </Dropin>
       </div>
     </div>
   );

@@ -133,6 +133,7 @@ filter: brightness(0.5);
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  height: 1024px;
 }
 .carouselContainer{
   display: flex;
@@ -230,11 +231,15 @@ filter: brightness(0.5);
   align-self: center;
 }
 .reviewPanel{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   margin-bottom: 20px;
 }
 .tagsPanel{
   display: flex;
   flex-direction: row;
+  width: 100%;
   gap: 10px;
 }
 .tag{
@@ -249,26 +254,57 @@ filter: brightness(0.5);
   border-radius: 30PX;
   font-weight: 700;
 }
+.ratingsPanel{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+
+}
+.Arrow{
+  transition: transform 0.3s ease;
+}
+.Arrowrotate{
+  transform: rotate(180deg);
+}
+
+.dropin.open.dropinText{
+  max-height: 500px;
+  transition: transform 0.5s ease;
+
+}
+.descEquip{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 40px;
+  
+}
 
 /* About page*/
 .dropinContainer{
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: end;
-  width: 80%;
+align-self: center;
+width: 80%;
+  height: 560px;
   gap: 20px;
   padding: 30px;
   margin-bottom: 70px;
 }
-details{
- 
-  background-color: #FF6060;
-  width: 80%;
-  height: 54px;
-  border-radius: 5px;
+.dropin-closed{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
-summary{
+.dropin-open{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  transition: max-height 0.3s ease; 
+
+}
+
+.summary{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -282,6 +318,21 @@ summary{
   z-index: 90;
 
 }
+.description{
+  font-size: 18px;
+}
+.equipment-list{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.equipment-item{
+  display: flex;
+  align-self: flex-start;
+  padding-left: 10px;
+  font-size: 18px;
+}
+/*not found page */
 .notFound{
   width: 597;
   height: 263;
@@ -289,14 +340,20 @@ summary{
   padding: 30px;
 
 }
-.dropinText{
-  display: flex;
-  padding: 10px;
-  background-color: #F6F6F6;
-  z-index: 100;
-}
+
 summary::-webkit-details-marker {
   display: none
+}
+.dropinText{
+  display: flex;
+justify-content: left;
+  padding: 10px;
+  background-color: #F6F6F6;
+  color: #000;
+  height: 80%;
+  overflow: hidden;
+  transition: max-height 0.3s ease; 
+
 }
 .fa-solid{
   display: flex;
