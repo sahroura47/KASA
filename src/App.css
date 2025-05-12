@@ -485,6 +485,9 @@ summary::-webkit-details-marker {
   .dropin-open{
     height: auto;
   }
+  .dropinText{
+    height: auto;
+  }
 }
 @media(max-width:768px) {
   .root{
@@ -546,6 +549,7 @@ summary::-webkit-details-marker {
   }
   .descEquip{
     flex-direction: column;
+    gap: 20px;
   }
   .ratingsPanel{
     width: 20px;
@@ -574,6 +578,7 @@ summary::-webkit-details-marker {
   }
   .dropinText{
     overflow-y: auto;
+    height: auto;
   }
   .notFound{
     width: 200px;
