@@ -17,7 +17,7 @@ function ImageCarousel({ pictures }) {
   return (
     <div className="carouselContainer">
       <button className="arrowLeft" onClick={handlePrev}>
-        <img src={arrowLeft} alt="précédent" />
+        <img src={arrowLeft}  alt="précédent" />
       </button>
       <img
         src={pictures[currentImageIndex]}

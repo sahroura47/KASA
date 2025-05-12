@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import ArrowUp from "../assets/Arrow-up.svg";
-const Dropin = ({ title, children }) => {
-  const [isOpen, setIsopen] = useState(false);
+const Dropin = ({index, title, children ,setDropinOpened, isOpen=false}) => {
   const toggleDropin = () => {
-    setIsopen((prevState) => !prevState);
+    setDropinOpened(index);
   };
   const dropinClass = isOpen ? "dropin-open" : "dropin-closed";
   const rotateClass = `Arrow${isOpen ? "rotate" : ""}`;
