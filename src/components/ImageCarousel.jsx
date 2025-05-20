@@ -8,8 +8,10 @@ function ImageCarousel({ pictures }) {
   };
   const handlePrev = () => {
     setCurrentImageIndex(
-      (prevIndex) => (prevIndex - 1 + pictures.length) % pictures.length
-    );
+      (prevIndex) => {
+        console.log((prevIndex - 1 + pictures.length) % pictures.length);
+        return (prevIndex - 1 + pictures.length) % pictures.length;
+      })
   };
   if (!pictures || pictures.length === 0) {
     return <div> Aucune image à afficher</div>;
@@ -22,7 +24,7 @@ function ImageCarousel({ pictures }) {
       </button> )}
       <img
         src={pictures[currentImageIndex]}
-        alt={"picture" + currentImageIndex + 1}
+        alt={"picture" + (currentImageIndex + 1)}
         className="carouselImage"
       />
       { showArrows && (<button className="arrowRight" onClick={handleNext}>
