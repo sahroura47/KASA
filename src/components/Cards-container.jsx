@@ -8,6 +8,7 @@ function CardsContainer () {
 try{
     const response= await fetch('http://localhost:8080/api/properties');
     const data= await response.json();
+    console.log('hey', response);
     setCards(data);
 } catch(error){
     console.error("erreur lors de la récupération de données:", error);
