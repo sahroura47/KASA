@@ -269,9 +269,9 @@
   transform: rotate(180deg);
 }
 
-.dropin.open.dropinText {
+.dropin-open.dropinText {
   max-height: 500px;
-  transition: transform 0.5s ease;
+  opacity: 1;
 }
 .descEquip {
   display: flex;
@@ -301,7 +301,9 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 300px;
+  height: auto;
+  transition: all 0.5s ease;
+
   
 }
 
@@ -351,9 +353,8 @@ summary::-webkit-details-marker {
   padding: 20px;
   background-color: #f6f6f6;
   color: #000;
-  height: 140px;
-  transform: translateY(0px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  height: auto;
+  transition: all 0.4 ease;
 }
 .fa-solid {
   display: flex;
@@ -369,7 +370,7 @@ summary::-webkit-details-marker {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 80%;
+  width: 100%;
   gap: 20px;
   padding: 30px;
   margin-bottom: 35px;
@@ -578,7 +579,7 @@ summary::-webkit-details-marker {
     overflow-y: auto;
     height: auto;
     transform: translateY(0px);
-    transform: 0.5s ease-out;
+    transition: all 0.5s ease;
   }
   .notFound{
     width: 200px;

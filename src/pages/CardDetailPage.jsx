@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import ImageCarousel from "../components/ImageCarousel";
 import Tags from "../components/Tags";
 import Ratings from "../components/Ratings";
@@ -7,24 +7,33 @@ import DropinContainer from "../components/DropinContainer";
 function CardDetailPage() {
   const { id } = useParams();
   const [card, setCards] = useState(null);
+  const navigate= useNavigate(); 
+  const [loading, setLoading]= useState(true);
   useEffect(() => {
     const fetchCardDetail = async () => {
       try {
         const response = await fetch(
           `http://localhost:8080/api/properties/${id}`
         );
+        if (!response.ok){
+          navigate("/not-found");
+          return;
+        };
         const data = await response.json();
         setCards(data);
       } catch (error) {
         console.error(
           "erreur lors de la récupération des détails de la carte",
-          error
-        );
+          error);
+          navigate("/not-found")
+      }
+      finally{ setLoading(false);
+        
       }
     };
     fetchCardDetail();
-  }, [id]);
-  if (!card) {
+  }, [id, navigate]);
+  if (loading) {
     return <div>chargement...</div>;
   }
   return (
