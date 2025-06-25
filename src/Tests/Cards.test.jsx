@@ -1,5 +1,5 @@
 import { screen, render } from "@testing-library/react";
-import Cards from "./Cards";
+import Cards from "../components/Cards";
 import { expect, test } from "vitest";
 describe('Cards component', ()=>{
     test('gérer le contenu des cartes', ()=>{

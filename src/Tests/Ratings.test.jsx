@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import StarR from "./Ratings";
+import StarR from "../components/Ratings";
 import redStar from '../assets/redStar.svg';
 import greyStar from '../assets/greyStar.svg';
 import { describe, expect } from "vitest";

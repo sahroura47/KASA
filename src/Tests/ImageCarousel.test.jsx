@@ -1,5 +1,5 @@
 import { expect, test } from "vitest";
-import ImageCarousel from "./ImageCarousel";
+import ImageCarousel from "../components/ImageCarousel";
 import { screen, render, fireEvent } from "@testing-library/react";
 describe('imageCarousel component',()=>{
     const fakePictures=[

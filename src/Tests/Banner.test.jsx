@@ -1,6 +1,6 @@
 import React from "react";
 import { getByAltText, getByText, render } from "@testing-library/react";
-import Banner from "./Banner";
+import Banner from "../components/Banner";
 import BannerAbout from '../assets/BannerAbout.svg'
 import BannerImg from "../assets/Banner-img.svg";
 import { test } from "vitest";

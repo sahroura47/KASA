@@ -1,5 +1,5 @@
 import { screen, render, waitFor } from "@testing-library/react";
-import CardsContainer from "./Cards-container";
+import CardsContainer from "../components/Cards-container";
 import { afterAll, afterEach, beforeAll, describe, expect } from "vitest";
 import { server } from '../mocks/serverSetup';
 import { MemoryRouter } from "react-router-dom";

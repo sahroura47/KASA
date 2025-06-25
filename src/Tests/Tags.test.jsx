@@ -1,5 +1,5 @@
 import { screen, render } from "@testing-library/react";
-import Tags from "./Tags";
+import Tags from "../components/Tags";
 import { describe, expect } from "vitest";
 describe('tags component', ()=>{
     test('affiche uniquement les premiers mots', ()=>{

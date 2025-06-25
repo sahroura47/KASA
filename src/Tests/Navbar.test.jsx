@@ -1,4 +1,4 @@
-import Navbar from "./Navbar";
+import Navbar from "../components/Navbar";
 import { screen, render } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
 import { describe, expect } from "vitest";
