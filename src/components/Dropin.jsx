@@ -13,7 +13,8 @@ const Dropin = ({index, title, children ,setDropinOpened, isOpen=false}) => {
         <span>{title} </span>
         <img src={ArrowUp} alt="image flèche" className={rotateClass}></img>
       </div>
-       <div className={`dropinText ${isOpen? "open" : ""}`}>{children}</div>
+       {isOpen && (
+        <div className='dropinText'>{children}</div>)}
     </div>
   );
 };
