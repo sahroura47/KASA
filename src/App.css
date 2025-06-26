@@ -11,7 +11,9 @@
   width: 100%;
   background-color: #fff;
 }
-
+.notFoundContainer a {
+  text-decoration: underline;
+}
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -23,6 +25,9 @@
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
+}
+.linkToHome a{
+  text-decoration: underline;
 }
 .app-header {
   display: flex;
@@ -196,6 +201,12 @@
 }
 .cardsCaption h2 {
   color: #ff6060;
+  font-weight: 500;
+  font-size: 36px;
+}
+.appartTags{
+  display: flex;
+  flex-direction: column;
 }
 .cardDetailTitle {
   display: flex;
@@ -204,13 +215,12 @@
 }
 .location {
   color: #000;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 18px;
 }
 .hostRatings{
   display: flex;
   flex-direction: column;
-  gap: 20px;
 }
 .ratings{
   margin-top: 10px;
@@ -224,6 +234,7 @@
 .hostName {
   color: #ff6060;
   font-size: 18px;
+  font-weight: 500;
 }
 .hostLogo {
   display: flex;
@@ -257,10 +268,11 @@
   gap: 10px;
   background-color: #ff6060;
   color: #fff;
-  width: 10%;
+  width: 15%;
   border-radius: 30px;
   font-weight: 700;
 }
+
 .ratingsPanel {
   display: flex;
   flex-direction: row;
@@ -277,6 +289,7 @@
   display: flex;
   max-height: 400px;
   opacity: 1;
+  margin-bottom: 20px;
 }
 .dropinText.closed{
   max-height: 0;
@@ -325,7 +338,7 @@
   color: #fff;
   padding: 10px;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 9px;
   z-index: 90;
 }
 .description {
@@ -521,7 +534,7 @@ summary::-webkit-details-marker {
   }
   .navbar{
     gap: 16px;
-    font-size: 16px;
+    font-size: 14px;
     align-items: center;
   }
   .imgText{
@@ -534,12 +547,7 @@ summary::-webkit-details-marker {
     width: 90%;
     align-self: center;
   }
-  .arrowLeft{
-    top: 45%;
-  }
-  .arrowRight{
-    top: 45%;
-  }
+  
   .arrowLeft img{
     width: 40px;
     height: 40px;
@@ -548,6 +556,19 @@ summary::-webkit-details-marker {
     width: 40px;
     height: 40px;
   }
+  .carouselContainer{
+    height: 30%
+  }
+  .arrowLeft{
+    top: 40%
+  }
+  .arrowRight{
+    top: 40%
+  }
+  .tag{
+    border-radius: 5px;
+    font-size: 15px;
+  }
   .cardsCaption{
     flex-direction: column;
     align-items: baseline;
@@ -555,21 +576,26 @@ summary::-webkit-details-marker {
   }
   .reviewPanel{
     width: inherit;
+    margin-bottom: 0;
   }
   .descEquip{
     flex-direction: column;
-    gap: 20px;
+    gap: 0px;
   }
   .ratingsPanel{
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
   }
-  .cardsCaptio h2{
+  .cardsCaption h2{
     flex-direction: column;
     justify-content: flex-start;
     align-items: baseline;
     gap: 0;
+    font-size: 18px;
     
+  }
+  .location{
+    font-size: 14px;
   }
   .hostRatings{
     flex-direction: row-reverse;
@@ -603,8 +629,30 @@ summary::-webkit-details-marker {
   .tag{
     width: 100%;
   }
+  .hostLogo{
+    width: 40px;
+    height: 40px;
+  }
+  .hostName{
+    font-size: 14px;
+  }
   .summary{
     height: 20px;
     align-items: center;
+    font-size: 16px;
+    width: 100%;
+    align-self: anchor-center;
+  }
+  .dropinContainer{
+    padding: 0;
+  }
+  .banner{
+    height: 150px;
+  }
+  .dropinText.open{
+    width: 93%;
+    align-self: center;
   }
 }
+  
+

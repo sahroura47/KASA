@@ -28,7 +28,7 @@ function CardDetailPage() {
           navigate("/not-found")
       }
       finally{ setLoading(false);
-        
+
       }
     };
     fetchCardDetail();
@@ -40,10 +40,15 @@ function CardDetailPage() {
     <div className="cardDetailPageContainer">
       <ImageCarousel pictures={card.pictures} />
       <div className="cardsCaption">
+        <div className="appartTags">
         <h2 className="cardDetailTitle">
           {card.title} <br></br>
           <span className="location">{card.location}</span>{" "}
         </h2>
+        <div className="reviewPanel">
+        <Tags tags={card.tags} />
+      </div>
+        </div>
         <div className="hostRatings">
           <div className="hostInfo">
             <p className="hostName">
@@ -63,19 +68,16 @@ function CardDetailPage() {
             </div>
         </div>
       </div>
-      <div className="reviewPanel">
-        <Tags tags={card.tags} />
-      </div>
       <div className="descEquip">
         <DropinContainer className="dropinCards" data={[
           {title:"Description", content:  <p className="description">{card.description}</p>},
-          {title:"Equipements", content:<lu className="equipment-list">
+          {title:"Equipements", content:<ul className="equipment-list">
             {card.equipments.map((item, index) => (
               <li key={index} className="equipment-item">
                 {item}
               </li>
             ))}
-          </lu> }
+          </ul> }
         ]} />
       </div>
     </div>
