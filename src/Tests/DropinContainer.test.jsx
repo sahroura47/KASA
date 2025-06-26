@@ -12,19 +12,20 @@ describe('DropinContainer', ()=>{
     expect(screen.getByText('infos générales')).toBeInTheDocument()
     expect(screen.getByText('équipements')).toBeInTheDocument()
     /* si le contenu n'est pas affiché par défaut*/ 
-    expect(screen.queryByText('contenu général')).not.toBeInTheDocument()
-    expect(screen.queryByText('contenu des équipements')).not.toBeInTheDocument()
+    console.log(screen.getByText('contenu général'));
+    expect(screen.getByText('contenu général')).toHaveClass('closed')
+    expect(screen.getByText('contenu des équipements')).toHaveClass('closed')
     /* on clique sue le premier dropin*/ 
     fireEvent.click(screen.getByText('infos générales'))
     /* on vérifie si le contenu du premier dropin est affiché*/ 
     expect(screen.getByText('contenu général'))
     /* et que le contenu du deuxième dropin n'est pas affiché*/ 
-    expect(screen.queryByText('contenu des équipements')).not.toBeInTheDocument()
+    expect(screen.getByText('contenu des équipements')).toHaveClass('closed')
     /* on clique sur le deuxième dropin*/ 
     fireEvent.click(screen.getByText('équipements'))
     /* on vérifie si le contenu deuxième dropin est affiché*/ 
     expect(screen.getByText('contenu des équipements'))
     /* et que le contenu du premier dropin n'est pas affiché*/
-    expect(screen.queryByText('contenu général')).not.toBeInTheDocument()
+    expect(screen.getByText('contenu général')).toHaveClass('closed')
     })
 })

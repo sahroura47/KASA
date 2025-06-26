@@ -274,8 +274,13 @@
 }
 
 .dropinText.open {
+  display: flex;
   max-height: 400px;
   opacity: 1;
+}
+.dropinText.closed{
+  max-height: 0;
+  opacity: 0;
 }
 .descEquip {
   display: flex;
