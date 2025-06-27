@@ -41,10 +41,10 @@ function CardDetailPage() {
       <ImageCarousel pictures={card.pictures} />
       <div className="cardsCaption">
         <div className="appartTags">
-        <h2 className="cardDetailTitle">
+        <h1 className="cardDetailTitle">
           {card.title} <br></br>
           <span className="location">{card.location}</span>{" "}
-        </h2>
+        </h1>
         <div className="reviewPanel">
         <Tags tags={card.tags} />
       </div>

@@ -199,10 +199,11 @@
   justify-content: space-between;
   gap: 50px;
 }
-.cardsCaption h2 {
+.cardsCaption h1 {
   color: #ff6060;
   font-weight: 500;
   font-size: 36px;
+  gap: 10px;
 }
 .appartTags{
   display: flex;
@@ -268,7 +269,8 @@
   gap: 10px;
   background-color: #ff6060;
   color: #fff;
-  width: 15%;
+  width: 20%;
+  height: 25px;
   border-radius: 30px;
   font-weight: 700;
 }
@@ -482,7 +484,7 @@ summary::-webkit-details-marker {
     width: 100%;
   }
   .tag {
-    width: 10%;
+    width: 40%;
     padding-right: 5px;
     padding-left: 5px;
   }
@@ -586,11 +588,11 @@ summary::-webkit-details-marker {
     width: 15px;
     height: 15px;
   }
-  .cardsCaption h2{
+  .cardsCaption h1{
     flex-direction: column;
     justify-content: flex-start;
     align-items: baseline;
-    gap: 0;
+    gap: 10px;
     font-size: 18px;
     
   }
