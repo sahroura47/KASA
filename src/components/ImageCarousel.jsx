@@ -7,29 +7,34 @@ function ImageCarousel({ pictures }) {
     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % pictures.length);
   };
   const handlePrev = () => {
-    setCurrentImageIndex(
-      (prevIndex) => {
-        console.log((prevIndex - 1 + pictures.length) % pictures.length);
-        return (prevIndex - 1 + pictures.length) % pictures.length;
-      })
+    setCurrentImageIndex((prevIndex) => {
+      return (prevIndex - 1 + pictures.length) % pictures.length;
+    });
   };
+
   if (!pictures || pictures.length === 0) {
     return <div> Aucune image à afficher</div>;
   }
-  const showArrows= pictures.length >1;
+
+  const showArrows = pictures.length > 1;
+  
   return (
     <div className="carouselContainer">
-      { showArrows && (<button className="arrowLeft" onClick={handlePrev}>
-        <img src={arrowLeft}  alt="précédent" />
-      </button> )}
+      {showArrows && (
+        <button className="arrowLeft" onClick={handlePrev}>
+          <img src={arrowLeft} alt="précédent" />
+        </button>
+      )}
       <img
         src={pictures[currentImageIndex]}
         alt={"picture" + (currentImageIndex + 1)}
         className="carouselImage"
       />
-      { showArrows && (<button className="arrowRight" onClick={handleNext}>
-        <img src={arrowRight} alt="suivant" />
-      </button>)}
+      {showArrows && (
+        <button className="arrowRight" onClick={handleNext}>
+          <img src={arrowRight} alt="suivant" />
+        </button>
+      )}
     </div>
   );
 }
