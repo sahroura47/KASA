@@ -18,10 +18,7 @@ a {
   color: #000;
   text-decoration: none;
 }
-a:hover {
-  color: #000;
-  text-decoration: underline;
-}
+
 
 body {
   margin: 0;
@@ -82,7 +79,7 @@ button:focus-visible {
   justify-content: space-between;
   color: #000;
   gap: 20px;
-  text-decoration: none;
+  
   
 }
 .navlist{

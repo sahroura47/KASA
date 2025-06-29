@@ -25,7 +25,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/84</span>
+                <span class='fraction'>0/99</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/84</span>
+                <span class='fraction'>0/99</span>
             </div>
         
             
@@ -147,7 +147,37 @@
 <a name='L82'></a><a href='#L82'>82</a>
 <a name='L83'></a><a href='#L83'>83</a>
 <a name='L84'></a><a href='#L84'>84</a>
-<a name='L85'></a><a href='#L85'>85</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -240,43 +270,50 @@
 <span class="cstat-no" title="statement not covered" >function CardDetailPage() {</span>
 <span class="cstat-no" title="statement not covered" >  const { id } = useParams();</span>
 <span class="cstat-no" title="statement not covered" >  const [card, setCards] = useState(null);</span>
-<span class="cstat-no" title="statement not covered" >  const navigate= useNavigate(); </span>
-<span class="cstat-no" title="statement not covered" >  const [loading, setLoading]= useState(true);</span>
+<span class="cstat-no" title="statement not covered" >  const navigate = useNavigate();</span>
+<span class="cstat-no" title="statement not covered" >  const [loading, setLoading] = useState(true);</span>
 <span class="cstat-no" title="statement not covered" >  useEffect(() =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >    const fetchCardDetail = async () =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >      try {</span>
 <span class="cstat-no" title="statement not covered" >        const response = await fetch(</span>
 <span class="cstat-no" title="statement not covered" >          `http://localhost:8080/api/properties/${id}`</span>
 <span class="cstat-no" title="statement not covered" >        );</span>
-<span class="cstat-no" title="statement not covered" >        if (!response.ok){</span>
-<span class="cstat-no" title="statement not covered" >          navigate("/not-found");</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        if (!response.ok) {</span>
+<span class="cstat-no" title="statement not covered" >          navigate("/not-found")</span>
 <span class="cstat-no" title="statement not covered" >          return;</span>
-<span class="cstat-no" title="statement not covered" >        };</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" >        const data = await response.json();</span>
 <span class="cstat-no" title="statement not covered" >        setCards(data);</span>
 <span class="cstat-no" title="statement not covered" >      } catch (error) {</span>
 <span class="cstat-no" title="statement not covered" >        console.error(</span>
 <span class="cstat-no" title="statement not covered" >          "erreur lors de la récupération des détails de la carte",</span>
-<span class="cstat-no" title="statement not covered" >          error);</span>
-<span class="cstat-no" title="statement not covered" >          navigate("/not-found")</span>
-<span class="cstat-no" title="statement not covered" >      }</span>
-<span class="cstat-no" title="statement not covered" >      finally{ setLoading(false);</span>
-<span class="cstat-no" title="statement not covered" >        </span>
+<span class="cstat-no" title="statement not covered" >          error</span>
+<span class="cstat-no" title="statement not covered" >        );</span>
+<span class="cstat-no" title="statement not covered" >      } finally {</span>
+<span class="cstat-no" title="statement not covered" >        setLoading(false);</span>
 <span class="cstat-no" title="statement not covered" >      }</span>
 <span class="cstat-no" title="statement not covered" >    };</span>
 <span class="cstat-no" title="statement not covered" >    fetchCardDetail();</span>
-<span class="cstat-no" title="statement not covered" >  }, [id, navigate]);</span>
-<span class="cstat-no" title="statement not covered" >  if (loading) {</span>
-<span class="cstat-no" title="statement not covered" >    return &lt;div&gt;chargement...&lt;/div&gt;;</span>
-<span class="cstat-no" title="statement not covered" >  }</span>
+<span class="cstat-no" title="statement not covered" >  }, []);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >  if (loading) return &lt;div&gt;chargement...&lt;/div&gt;;</span>
+<span class="cstat-no" title="statement not covered" >  </span>
+<span class="cstat-no" title="statement not covered" >  if (!card) return null;</span>
 <span class="cstat-no" title="statement not covered" >  return (</span>
 <span class="cstat-no" title="statement not covered" >    &lt;div className="cardDetailPageContainer"&gt;</span>
 <span class="cstat-no" title="statement not covered" >      &lt;ImageCarousel pictures={card.pictures} /&gt;</span>
 <span class="cstat-no" title="statement not covered" >      &lt;div className="cardsCaption"&gt;</span>
-<span class="cstat-no" title="statement not covered" >        &lt;h2 className="cardDetailTitle"&gt;</span>
-<span class="cstat-no" title="statement not covered" >          {card.title} &lt;br&gt;&lt;/br&gt;</span>
+<span class="cstat-no" title="statement not covered" >        &lt;div className="appartTags"&gt;</span>
+<span class="cstat-no" title="statement not covered" >          &lt;h1 className="cardDetailTitle"&gt;</span>
+<span class="cstat-no" title="statement not covered" >            {card.title} &lt;br&gt;&lt;/br&gt;</span>
+<span class="cstat-no" title="statement not covered" >          &lt;/h1&gt;</span>
 <span class="cstat-no" title="statement not covered" >          &lt;span className="location"&gt;{card.location}&lt;/span&gt;{" "}</span>
-<span class="cstat-no" title="statement not covered" >        &lt;/h2&gt;</span>
+<span class="cstat-no" title="statement not covered" >          &lt;div className="reviewPanel"&gt;</span>
+<span class="cstat-no" title="statement not covered" >            &lt;Tags tags={card.tags} /&gt;</span>
+<span class="cstat-no" title="statement not covered" >          &lt;/div&gt;</span>
+<span class="cstat-no" title="statement not covered" >        &lt;/div&gt;</span>
 <span class="cstat-no" title="statement not covered" >        &lt;div className="hostRatings"&gt;</span>
 <span class="cstat-no" title="statement not covered" >          &lt;div className="hostInfo"&gt;</span>
 <span class="cstat-no" title="statement not covered" >            &lt;p className="hostName"&gt;</span>
@@ -292,24 +329,32 @@
 <span class="cstat-no" title="statement not covered" >            &lt;/div&gt;</span>
 <span class="cstat-no" title="statement not covered" >          &lt;/div&gt;</span>
 <span class="cstat-no" title="statement not covered" >          &lt;div className="ratings"&gt;</span>
-<span class="cstat-no" title="statement not covered" >              &lt;Ratings rating={card.rating} /&gt;</span>
-<span class="cstat-no" title="statement not covered" >            &lt;/div&gt;</span>
+<span class="cstat-no" title="statement not covered" >            &lt;Ratings rating={card.rating} /&gt;</span>
+<span class="cstat-no" title="statement not covered" >          &lt;/div&gt;</span>
 <span class="cstat-no" title="statement not covered" >        &lt;/div&gt;</span>
 <span class="cstat-no" title="statement not covered" >      &lt;/div&gt;</span>
-<span class="cstat-no" title="statement not covered" >      &lt;div className="reviewPanel"&gt;</span>
-<span class="cstat-no" title="statement not covered" >        &lt;Tags tags={card.tags} /&gt;</span>
-<span class="cstat-no" title="statement not covered" >      &lt;/div&gt;</span>
 <span class="cstat-no" title="statement not covered" >      &lt;div className="descEquip"&gt;</span>
-<span class="cstat-no" title="statement not covered" >        &lt;DropinContainer className="dropinCards" data={[</span>
-<span class="cstat-no" title="statement not covered" >          {title:"Description", content:  &lt;p className="description"&gt;{card.description}&lt;/p&gt;},</span>
-<span class="cstat-no" title="statement not covered" >          {title:"Equipements", content:&lt;lu className="equipment-list"&gt;</span>
-<span class="cstat-no" title="statement not covered" >            {card.equipments.map((item, index) =&gt; (</span>
-<span class="cstat-no" title="statement not covered" >              &lt;li key={index} className="equipment-item"&gt;</span>
-<span class="cstat-no" title="statement not covered" >                {item}</span>
-<span class="cstat-no" title="statement not covered" >              &lt;/li&gt;</span>
-<span class="cstat-no" title="statement not covered" >            ))}</span>
-<span class="cstat-no" title="statement not covered" >          &lt;/lu&gt; }</span>
-<span class="cstat-no" title="statement not covered" >        ]} /&gt;</span>
+<span class="cstat-no" title="statement not covered" >        &lt;DropinContainer</span>
+<span class="cstat-no" title="statement not covered" >          className="dropinCards"</span>
+<span class="cstat-no" title="statement not covered" >          data={[</span>
+<span class="cstat-no" title="statement not covered" >            {</span>
+<span class="cstat-no" title="statement not covered" >              title: "Description",</span>
+<span class="cstat-no" title="statement not covered" >              content: &lt;p className="description"&gt;{card.description}&lt;/p&gt;,</span>
+<span class="cstat-no" title="statement not covered" >            },</span>
+<span class="cstat-no" title="statement not covered" >            {</span>
+<span class="cstat-no" title="statement not covered" >              title: "Equipements",</span>
+<span class="cstat-no" title="statement not covered" >              content: (</span>
+<span class="cstat-no" title="statement not covered" >                &lt;ul className="equipment-list"&gt;</span>
+<span class="cstat-no" title="statement not covered" >                  {card.equipments.map((item, index) =&gt; (</span>
+<span class="cstat-no" title="statement not covered" >                    &lt;li key={index} className="equipment-item"&gt;</span>
+<span class="cstat-no" title="statement not covered" >                      {item}</span>
+<span class="cstat-no" title="statement not covered" >                    &lt;/li&gt;</span>
+<span class="cstat-no" title="statement not covered" >                  ))}</span>
+<span class="cstat-no" title="statement not covered" >                &lt;/ul&gt;</span>
+<span class="cstat-no" title="statement not covered" >              ),</span>
+<span class="cstat-no" title="statement not covered" >            },</span>
+<span class="cstat-no" title="statement not covered" >          ]}</span>
+<span class="cstat-no" title="statement not covered" >        /&gt;</span>
 <span class="cstat-no" title="statement not covered" >      &lt;/div&gt;</span>
 <span class="cstat-no" title="statement not covered" >    &lt;/div&gt;</span>
 <span class="cstat-no" title="statement not covered" >  );</span>
@@ -322,7 +367,7 @@
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-06-26T15:15:45.315Z
+                at 2025-06-29T11:50:16.326Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

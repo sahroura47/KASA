@@ -35,6 +35,9 @@ function ImageCarousel({ pictures }) {
           <img src={arrowRight} alt="suivant" />
         </button>
       )}
+      <div className="pagination">
+        {currentImageIndex+1} / {pictures.length}
+      </div>
     </div>
   );
 }

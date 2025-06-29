@@ -9,7 +9,6 @@ function CardDetailPage() {
   const [card, setCards] = useState(null);
   const navigate = useNavigate();
   const [loading, setLoading] = useState(true);
-
   useEffect(() => {
     const fetchCardDetail = async () => {
       try {
@@ -18,8 +17,7 @@ function CardDetailPage() {
         );
 
         if (!response.ok) {
-          navigate("/not-found");
-
+          navigate("/not-found")
           return;
         }
 
@@ -30,17 +28,16 @@ function CardDetailPage() {
           "erreur lors de la récupération des détails de la carte",
           error
         );
-        navigate("/not-found");
       } finally {
         setLoading(false);
       }
     };
     fetchCardDetail();
-  }, [id, navigate]);
-  if (loading) {
-    return <div>chargement...</div>;
-  }
+  }, []);
 
+  if (loading) return <div>chargement...</div>;
+  
+  if (!card) return null;
   return (
     <div className="cardDetailPageContainer">
       <ImageCarousel pictures={card.pictures} />
@@ -48,8 +45,8 @@ function CardDetailPage() {
         <div className="appartTags">
           <h1 className="cardDetailTitle">
             {card.title} <br></br>
-            <span className="location">{card.location}</span>{" "}
           </h1>
+          <span className="location">{card.location}</span>{" "}
           <div className="reviewPanel">
             <Tags tags={card.tags} />
           </div>

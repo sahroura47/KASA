@@ -37,7 +37,10 @@
   padding: 1rem 2rem;
   background-color: inherit;
 }
-
+.active{
+  text-decoration: underline;
+  color: #000;
+}
 .homeContainer {
   display: flex;
   flex-direction: column;
@@ -110,6 +113,7 @@
   position: absolute;
   bottom: 20px;
   margin-left: 10px;
+  text-align: left;
 }
 .linkToDetail {
   width: 30%;
@@ -191,6 +195,14 @@
   border: none;
   outline: none;
 }
+.pagination{
+  color: #fff;
+  background-color: transparent;
+  position: absolute;
+  bottom: 5%;
+  right: 50%;
+
+}
 .cardsCaption {
   display: flex;
   flex-direction: row;
@@ -204,20 +216,19 @@
   font-weight: 500;
   font-size: 36px;
   gap: 10px;
+  text-align: left;
 }
 .appartTags{
   display: flex;
   flex-direction: column;
 }
-.cardDetailTitle {
-  display: flex;
-  flex-direction: column;
-  align-items: baseline;
-}
+
 .location {
   color: #000;
   font-weight: 500;
   font-size: 18px;
+  text-align: left;
+  margin-bottom: 20px;
 }
 .hostRatings{
   display: flex;
@@ -252,6 +263,7 @@
 .reviewPanel {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 20px;
 }
@@ -269,10 +281,11 @@
   gap: 10px;
   background-color: #ff6060;
   color: #fff;
-  width: 20%;
-  height: 25px;
+  width: 30%;
+  height: 30px;
   border-radius: 30px;
   font-weight: 700;
+  padding: 0 10px;
 }
 
 .ratingsPanel {
@@ -347,6 +360,7 @@
   font-size: 18px;
   max-height: 200px;
   overflow-y: auto;
+  text-align: left;
 }
 .equipment-list {
   display: flex;
@@ -380,6 +394,7 @@ summary::-webkit-details-marker {
   opacity: 0;
   overflow: hidden;
   transition: max-height 0.5s ease, opacity 0.5s ease;
+  text-align: left;
 }
 .fa-solid {
   display: flex;
@@ -532,7 +547,7 @@ summary::-webkit-details-marker {
     padding: 10px;
   }
   .logo{
-    font-size: 8px;
+    font-size: 6px;
   }
   .navbar{
     gap: 16px;
@@ -540,14 +555,20 @@ summary::-webkit-details-marker {
     align-items: center;
   }
   .imgText{
-    font-size: 30px;
+    font-size: 24px;
+    text-align: left;
+    padding: 20px;
+    top: 20%;
+    font-weight: 700;
+    line-height: 1.2;
   }
   .cardDetailPageContainer{
     align-items: baseline;
   }
   .cardsContainer{
-    width: 90%;
+    width: 105%;
     align-self: center;
+    background-color: transparent;
   }
   
   .arrowLeft img{
@@ -570,6 +591,7 @@ summary::-webkit-details-marker {
   .tag{
     border-radius: 5px;
     font-size: 15px;
+    width: fit-content;
   }
   .cardsCaption{
     flex-direction: column;
@@ -579,6 +601,8 @@ summary::-webkit-details-marker {
   .reviewPanel{
     width: inherit;
     margin-bottom: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
   .descEquip{
     flex-direction: column;
@@ -589,15 +613,15 @@ summary::-webkit-details-marker {
     height: 15px;
   }
   .cardsCaption h1{
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: baseline;
     gap: 10px;
     font-size: 18px;
     
   }
   .location{
     font-size: 14px;
+    text-align: left;
+    margin-bottom: 20px;
+    
   }
   .hostRatings{
     flex-direction: row-reverse;
@@ -628,9 +652,7 @@ summary::-webkit-details-marker {
     padding: 0%;
     font-size: 20px;
   }
-  .tag{
-    width: 100%;
-  }
+  
   .hostLogo{
     width: 40px;
     height: 40px;
@@ -655,6 +677,30 @@ summary::-webkit-details-marker {
     width: 93%;
     align-self: center;
   }
+  .appartTags{
+    width: 100%;
+   flex-wrap: wrap;
+   flex-direction: column;
+  }
+  .tagsPanel{
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .navlist{
+    text-transform: uppercase;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+  .notFoundContainer{
+     height: max-content;
+  }
+  .pagination{
+    right: 45%;
+  }
+  .card{
+    width: 100%;
+  }
+ 
 }
   
 

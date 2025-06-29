@@ -21,7 +21,7 @@ function CardsContainer() {
         <Link key={card.id} to={"/card/" + card.id} className="linkToDetail">
           <Cards
             key={card.id}
-            imageUrl={card.pictures[0]}
+            imageUrl={card.cover}
             caption={card.title}
           />
         </Link>
