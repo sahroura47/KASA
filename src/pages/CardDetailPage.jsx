@@ -23,13 +23,12 @@ function CardDetailPage() {
 
         const data = await response.json();
         setCards(data);
+        setLoading(false);
       } catch (error) {
         console.error(
           "erreur lors de la récupération des détails de la carte",
           error
         );
-      } finally {
-        setLoading(false);
       }
     };
     fetchCardDetail();

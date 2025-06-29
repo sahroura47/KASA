@@ -1,5 +1,5 @@
 * {
-  font-family: 'Montserrat' , sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 #root {
   max-width: 1280px;
@@ -26,7 +26,7 @@
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
-.linkToHome a{
+.linkToHome a {
   text-decoration: underline;
 }
 .app-header {
@@ -37,7 +37,7 @@
   padding: 1rem 2rem;
   background-color: inherit;
 }
-.active{
+.active {
   text-decoration: underline;
   color: #000;
 }
@@ -195,13 +195,12 @@
   border: none;
   outline: none;
 }
-.pagination{
+.pagination {
   color: #fff;
   background-color: transparent;
   position: absolute;
   bottom: 5%;
   right: 50%;
-
 }
 .cardsCaption {
   display: flex;
@@ -217,8 +216,9 @@
   font-size: 36px;
   gap: 10px;
   text-align: left;
+  margin-bottom: 10px;
 }
-.appartTags{
+.appartTags {
   display: flex;
   flex-direction: column;
 }
@@ -230,11 +230,11 @@
   text-align: left;
   margin-bottom: 20px;
 }
-.hostRatings{
+.hostRatings {
   display: flex;
   flex-direction: column;
 }
-.ratings{
+.ratings {
   margin-top: 10px;
 }
 .hostInfo {
@@ -257,7 +257,7 @@
   width: 64px;
   align-self: center;
 }
-.hostPic{
+.hostPic {
   border-radius: 50%;
 }
 .reviewPanel {
@@ -306,7 +306,7 @@
   opacity: 1;
   margin-bottom: 20px;
 }
-.dropinText.closed{
+.dropinText.closed {
   max-height: 0;
   opacity: 0;
 }
@@ -339,8 +339,6 @@
   width: 100%;
   height: auto;
   transition: all 0.5s ease;
-
-  
 }
 
 .summary {
@@ -456,7 +454,7 @@ summary::-webkit-details-marker {
 /* Styles for tablets and smaller */
 
 @media (max-width: 1024px) {
-  main{
+  main {
     align-items: center;
   }
   .homeContainer {
@@ -494,7 +492,7 @@ summary::-webkit-details-marker {
     align-items: start;
     font-size: 18px;
   }
-  
+
   .tagsPanel {
     width: 100%;
   }
@@ -503,58 +501,57 @@ summary::-webkit-details-marker {
     padding-right: 5px;
     padding-left: 5px;
   }
-  .reviewPanel{
+  .reviewPanel {
     width: 100%;
     justify-content: space-between;
     gap: 20%;
     margin-bottom: 40px;
-    
   }
-  .descEquip{
+  .descEquip {
     justify-content: space-around;
     width: 100%;
   }
-  .dropinContainer{
+  .dropinContainer {
     align-self: center;
-    padding-left: 7%
+    padding-left: 7%;
   }
-  .dropin-open{
+  .dropin-open {
     height: auto;
   }
-  .dropinText{
+  .dropinText {
     height: auto;
   }
 }
-@media(max-width:768px) {
-  .root{
+@media (max-width: 768px) {
+  .root {
     max-width: 100%;
   }
-  main{
+  main {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .app-header{
+  .app-header {
     padding-left: 0;
     padding-right: 0;
     width: 95%;
     justify-content: center;
   }
-  .homeContainer{
+  .homeContainer {
     width: auto;
     justify-content: center;
     align-items: center;
     padding: 10px;
   }
-  .logo{
+  .logo {
     font-size: 6px;
   }
-  .navbar{
+  .navbar {
     gap: 16px;
     font-size: 14px;
     align-items: center;
   }
-  .imgText{
+  .imgText {
     font-size: 24px;
     text-align: left;
     padding: 20px;
@@ -562,145 +559,141 @@ summary::-webkit-details-marker {
     font-weight: 700;
     line-height: 1.2;
   }
-  .cardDetailPageContainer{
+  .cardDetailPageContainer {
     align-items: baseline;
   }
-  .cardsContainer{
+  .cardsContainer {
     width: 105%;
     align-self: center;
     background-color: transparent;
   }
-  
-  .arrowLeft img{
+
+  .arrowLeft img {
     width: 40px;
     height: 40px;
   }
-  .arrowRight img{
+  .arrowRight img {
     width: 40px;
     height: 40px;
   }
-  .carouselContainer{
-    height: 30%
+  .carouselContainer {
+    height: 30%;
   }
-  .arrowLeft{
-    top: 40%
+  .arrowLeft {
+    top: 40%;
+    padding: 0;
   }
-  .arrowRight{
-    top: 40%
+  .arrowRight {
+    top: 40%;
+    padding: 0;
   }
-  .tag{
+  .tag {
     border-radius: 5px;
     font-size: 15px;
     width: fit-content;
   }
-  .cardsCaption{
+  .cardsCaption {
     flex-direction: column;
     align-items: baseline;
     gap: 0;
   }
-  .reviewPanel{
+  .reviewPanel {
     width: inherit;
     margin-bottom: 0;
     flex-direction: row;
     flex-wrap: wrap;
   }
-  .descEquip{
+  .descEquip {
     flex-direction: column;
     gap: 0px;
   }
-  .ratingsPanel{
+  .ratingsPanel {
     width: 15px;
     height: 15px;
   }
-  .cardsCaption h1{
+  .cardsCaption h1 {
     gap: 10px;
     font-size: 18px;
-    
   }
-  .location{
+  .location {
     font-size: 14px;
     text-align: left;
     margin-bottom: 20px;
-    
   }
-  .hostRatings{
+  .hostRatings {
     flex-direction: row-reverse;
     justify-content: space-between;
     gap: 50px;
     width: 100%;
-    
   }
-  .ratings{
+  .ratings {
     width: 100%;
     margin-top: 20px;
   }
-  .description{
-    overflow-y: auto
+  .description {
+    overflow-y: auto;
   }
-  .dropinText{
+  .dropinText {
     overflow-y: auto;
     height: auto;
     transform: translateY(0px);
     transition: all 0.5s ease;
   }
-  .notFound{
+  .notFound {
     width: 200px;
     height: 200px;
     padding: 0%;
   }
-  .NotfoundText{
+  .NotfoundText {
     padding: 0%;
     font-size: 20px;
   }
-  
-  .hostLogo{
+
+  .hostLogo {
     width: 40px;
     height: 40px;
   }
-  .hostName{
+  .hostName {
     font-size: 14px;
   }
-  .summary{
+  .summary {
     height: 20px;
     align-items: center;
     font-size: 16px;
     width: 100%;
     align-self: anchor-center;
   }
-  .dropinContainer{
+  .dropinContainer {
     padding: 0;
   }
-  .banner{
+  .banner {
     height: 150px;
   }
-  .dropinText.open{
+  .dropinText.open {
     width: 93%;
     align-self: center;
   }
-  .appartTags{
+  .appartTags {
     width: 100%;
-   flex-wrap: wrap;
-   flex-direction: column;
+    flex-wrap: wrap;
+    flex-direction: column;
   }
-  .tagsPanel{
+  .tagsPanel {
     width: 100%;
     flex-wrap: wrap;
   }
-  .navlist{
+  .navlist {
     text-transform: uppercase;
     font-size: 12px;
     white-space: nowrap;
   }
-  .notFoundContainer{
-     height: max-content;
+  .notFoundContainer {
+    height: max-content;
   }
-  .pagination{
-    right: 45%;
+  .pagination {
+    display: none;
   }
-  .card{
+  .card {
     width: 100%;
   }
- 
 }
-  
-

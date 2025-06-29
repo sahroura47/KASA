@@ -1,4 +1,4 @@
-import ArrowUp from "../assets/Arrow-up.svg";
+import ArrowUp from "../assets/arrow-up.svg";
 const Dropin = ({
   index,
   title,
